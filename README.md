@@ -69,7 +69,5 @@ You can change RIE and CPE Parameters and Thresholds. The following commands out
 
 - ### Running after Parameter Changes
   ```
-  make clean
-  make
   ./xesc run
   ```
