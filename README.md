@@ -23,7 +23,7 @@ Vehicle telemetry (velocity/acceleration) is provided as a 3D vector:
 (x)*i* + (y)*j* + (z)*k*  
   
 x, y, and z are magnitudes of components in each of the 3 dimensions.  
-These dimensions, i, j and k, are usually pitch, yaw and roll.  
+These dimensions, *i*, *j* and *k*, are usually pitch, yaw and roll.  
 They can also denote linear motion, lateral motion, and rotational motion.  
 
 ## Correction Vector
@@ -47,14 +47,29 @@ make
 ## Running Electronic Stability Control Simulation
 
 ```
-./xesc
+./xesc run
 ```
 This runs the simulation with default presets and thresholds. To run with own parameters, refer to the section(s) underneath.
 
-## Random Influence Engine (RIE) Parameter Changes
+## Running with Parameter Changes
 
-(in progress)
+You can change RIE and CPE Parameters and Thresholds. The following commands outline what can be changed, and how they can be changed.
 
-## Core Physics Engine (CPE) Parameter Changes
+- ### Random Influence Engine (RIE) Parameter Changes
 
-(in progress)
+  ```
+  ./xesc modify RIE
+  ```
+
+- ### Core Physics Engine (CPE) Parameter Changes
+
+  ```
+  ./xesc modify CPE
+  ```
+
+- ### Running after Parameter Changes
+  ```
+  make clean
+  make
+  ./xesc run
+  ```
