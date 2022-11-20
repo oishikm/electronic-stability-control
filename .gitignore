@@ -56,3 +56,4 @@ dist/
 build/
 src/__pycache__/
 readcfg.spec
+TODO.txt
