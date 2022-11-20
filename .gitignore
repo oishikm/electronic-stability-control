@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Added 20 November 2022
+dist/
+build/
+src/__pycache__/
+readcfg.spec

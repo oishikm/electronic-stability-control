@@ -4,7 +4,7 @@ Electronic Stability Control for Vehicle Dynamics.
   
 ## Overview
   
-![Error](./img-src/ESControl-Initial.drawio.png)
+![Error](./img/ESControl-Initial.drawio.png)
   
 ***Core Physics Engine (CPE)*** senses/calculates and provides telemetry of vehicle.  
 It is also capable of controlling active components in the vehicle that can alter vehicle dynamics to adhere to ideal trajectory.  
@@ -69,5 +69,6 @@ You can change RIE and CPE Parameters and Thresholds. The following commands out
 
 - ### Running after Parameter Changes
   ```
+  make newcfg
   ./xesc run
   ```
