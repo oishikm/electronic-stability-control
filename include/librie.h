@@ -5,10 +5,10 @@
  */
 
 #pragma once
-#include<time.h>
-#include"libesc.h"
-#include"temp/cpe.h"
-#include"temp/rie.h"
+#include <time.h>
+#include "libesc.h"
+#include "temp/cpe.h"
+#include "temp/rie.h"
 
 vector_3d* generate_influence_vector()
 {

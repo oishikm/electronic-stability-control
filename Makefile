@@ -7,6 +7,7 @@ install:
 	pyinstaller src/readcfg.py -y
 	make newcfg
 	gcc -Wall ./src/modify.c -o ./xmodify -lm
+	gcc -Wall ./src/run.c -o ./xrun -lm
 	gcc -Wall ./src/esc.c -o ./xesc -lm
 	@printf "\n[INFO] Installation completed.\n\n"
 

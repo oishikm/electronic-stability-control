@@ -5,7 +5,7 @@
  */
 
 #pragma once
-#include"libesc.h"
+#include "libesc.h"
 
 vector_3d* calculate_correction_vector(vector_3d* current, vector_3d* ideal)
 {
@@ -19,6 +19,6 @@ vector_3d* calculate_correction_vector(vector_3d* current, vector_3d* ideal)
     correction_vector->j = delta_j;
     correction_vector->k = delta_k;
     if(total_delta > 0.001)
-        printf("\n[INFO] ESControl Engine found delta : %f", total_delta);
+        printf("\n[INFO] ESControl Engine found delta of magnitude %f", total_delta);
     return correction_vector;
 }

@@ -12,6 +12,11 @@ int main(int argc, char** argv)
             sprintf(command, "./x%s %s", argv[1], argv[2]);
             system(command);
         }
+        else if(strcmp(argv[1], "run") == 0)     
+        {
+            sprintf(command, "./x%s", argv[1]);
+            system(command);
+        }
         else
             printf("\n[ERROR] Could not load module : %s.\n\n", argv[1]);
     }

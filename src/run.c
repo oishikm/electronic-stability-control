@@ -1,23 +1,16 @@
 #include "../include/libcpe.h"
 
-int main(int argc, char** argv)
+int main()
 {
-    if(argc>1)
-    { 
-        strcpy(cfg_specification, argv[1]);
-        
-        sprintf(cfg_file_path, "./src/modify_%s.txt", cfg_specification);
-        fptr = fopen(cfg_file_path, "r");
-        if(fptr)
-        {
-            while(fgets(read_buffer, BUFSIZ, fptr) != NULL)
-                printf("%s", read_buffer);
-            
-            fclose(fptr);
-        }
-        else
-            printf("\n[ERROR] Could not read configuration manual : %s.\n\n", cfg_file_path);
+    float current_timer = 0.0;
+    init_current_vector();
+    while(current_timer < target_time)
+    {
+        current_timer += simulate_clock_pulse();
+        accept_influence_vector(generate_influence_vector());
+        printf("\n[TIME] %.1f s", current_timer);
+        accept_correction_vector(calculate_correction_vector(&current_vector, &ideal_vector));        
     }
-    else
-        printf("\n[ERROR] xrun needs configuration specification as command line argument.\n\n");
+    printf("\n[INFO] Simulation completed successfully.\n");
+    return 0;
 }
