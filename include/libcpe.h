@@ -6,6 +6,8 @@
 
 #include"libesc.h"
 
+vector_3d current_vector;
+
 vector_3d* calculate_target_velocity(point_3d* start, point_3d* finish, float target_time)
 {
     float delta_x, delta_y, delta_z, total_displacement;
@@ -23,4 +25,18 @@ vector_3d* calculate_target_velocity(point_3d* start, point_3d* finish, float ta
         printf("\n[WARNING] Simulation will run for more than an hour.");   
     printf("\n[INFO] Simulation will run for %f seconds.", target_time);
     return target_velocity;
+}
+
+void accept_correction_vector(vector_3d* correction_vector)
+{
+    current_vector.i += correction_vector->i;
+    current_vector.j += correction_vector->j;
+    current_vector.k += correction_vector->k;
+}
+
+void accept_influence_vector(vector_3d* influence_vector)
+{
+    current_vector.i += influence_vector->i;
+    current_vector.j += influence_vector->j;
+    current_vector.k += influence_vector->k;
 }

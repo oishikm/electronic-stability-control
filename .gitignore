@@ -55,5 +55,6 @@ dkms.conf
 dist/
 build/
 src/__pycache__/
+include/temp/
 readcfg.spec
 TODO.txt
