@@ -23,7 +23,7 @@ git clone https://github.com/oishikm/electronic-stability-control.git
 cd electronic-stability-control
 make
 ```
-Installation requires gcc, python and [pyinstaller](https://pypi.org/project/pyinstaller/).
+Installation requires linux, gcc, python and [pyinstaller](https://pypi.org/project/pyinstaller/).
 
 ## Running Electronic Stability Control Simulation
 
