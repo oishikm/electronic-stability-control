@@ -1,0 +1,9 @@
+Available Configuartions for Random Influence Engine.
+
+File is at cfg/rie.cfg
+
+[+] strength
+    * Description
+        maximum strength of external influence.
+    * Default Value
+        0.2

@@ -24,7 +24,7 @@ def generate_header(header_filename, filtered_cfg):
     }
     cfg_dict = dict(filtered_cfg)
     with open(header_filename, "w") as cfg_header:
-        cfg_header.write('#include\"libcpe.h\"\n')
+        cfg_header.write('#include\"../libcpe.h\"\n#pragma once\n')
         for key in cfg_dict.keys():
             cfg_header.write(f'{datatype[key]} {key} = {cfg_dict[key]};\n')
 

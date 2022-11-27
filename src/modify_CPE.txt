@@ -1,0 +1,21 @@
+Available Configuartions for Core Physics Engine.
+
+File is at cfg/cpe.cfg
+
+[+] start_coord
+    * Description
+        Starting co-ordinates. Cartesian, 3D.
+    * Default Value
+        {0,0,0}
+
+[+] finish_coord
+    * Description
+        Finishing co-ordinates. Cartesian, 3D.
+    * Default Value
+        {50,50,50}
+
+[+] target_time
+    * Description
+        Target running time. Seconds (s).
+    * Default Value
+        50

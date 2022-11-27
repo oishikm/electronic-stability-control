@@ -58,3 +58,6 @@ src/__pycache__/
 include/temp/
 readcfg.spec
 TODO.txt
+xmodify
+xrun
+xesc
