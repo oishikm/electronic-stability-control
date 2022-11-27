@@ -4,6 +4,7 @@
  * Oishik Mukhopadhyay | 20 November 2022
  */
 
+#pragma once
 #include"libesc.h"
 
 vector_3d* calculate_correction_vector(vector_3d* current, vector_3d* ideal)

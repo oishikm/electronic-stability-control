@@ -16,3 +16,5 @@ typedef struct _vector_3d {
 typedef struct _point_3d {
     float x, y, z;
 } point_3d;
+
+vector_3d current_vector;
