@@ -1,13 +1,7 @@
-#include <stdio.h>
-#include <string.h>
+#include "../include/libcpe.h"
 
 int main(int argc, char** argv)
 {
-    FILE* fptr;
-    char read_buffer[BUFSIZ];
-    char cfg_specification[16];
-    char cfg_file_path[64];
-
     if(argc>1)
     { 
         strcpy(cfg_specification, argv[1]);
@@ -25,6 +19,5 @@ int main(int argc, char** argv)
             printf("\n[ERROR] Could not read configuration manual : %s.\n\n", cfg_file_path);
     }
     else
-        printf("\n[ERROR] xmodify needs configuration specification as command line argument.\n\n");
-    return 0;
+        printf("\n[ERROR] xrun needs configuration specification as command line argument.\n\n");
 }
